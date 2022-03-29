@@ -145,6 +145,8 @@ app.Quit(wpsapi.wdDoNotSaveChanges)
 [点我查看](https://github.com/timxx/pywpsrpc/wiki/Run-on-Server)
 
 
+## 修复deepin wps路径问题
+
 edit   `.bashrc`
 ```shell
 export LD_LIBRARY_PATH=/opt/apps/cn.wps.wps-office/files/kingsoft/wps-office/office6

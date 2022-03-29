@@ -144,3 +144,17 @@ app.Quit(wpsapi.wdDoNotSaveChanges)
 ## 在服务器上运行
 [点我查看](https://github.com/timxx/pywpsrpc/wiki/Run-on-Server)
 
+
+edit   `.bashrc`
+```shell
+export LD_LIBRARY_PATH=/opt/apps/cn.wps.wps-office/files/kingsoft/wps-office/office6
+
+source .bashrc
+```
+
+```shell
+cd /opt/apps/cn.wps.wps-office/files/kingsoft/wps-office/office6
+sudo patchelf --set-rpath '$ORIGIN:/opt/apps/cn.wps.wps-office/files/kingsoft/wps-office/office6' librpcwpsapi.so
+sudo patchelf --set-rpath '$ORIGIN:/opt/apps/cn.wps.wps-office/files/kingsoft/wps-office/office6' librpcwppapi.so
+sudo patchelf --set-rpath '$ORIGIN:/opt/apps/cn.wps.wps-office/files/kingsoft/wps-office/office6' librpcetapi.so
+```
